@@ -1,0 +1,16 @@
+.page-item {
+  .page-link {
+    color: $light;
+    font-size: 1rem;
+    background: $warning;
+  }
+  &.active .page-link {
+    background-color: lighten($light,10%);
+    color: $light;
+  }
+  &.disabled .page-link {
+    background: $warning;
+  }
+}
+
+

@@ -1,0 +1,26 @@
+.cart-bg {
+  background-image: url($image+"detail-bg-vertical.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  width: 100%;
+  @media (min-width: 767px) {
+    background-image: url($image+"detail-bg.jpg");
+    background-size: 100% 100%;
+    background-position: top center;
+  }
+}
+
+.cart-cal-header {
+  border-top: 3px double rgb(70, 39, 5);
+  border-bottom: 3px double rgb(70, 39, 5);
+  border-right: 10px solid rgb(70, 39, 5);
+  border-left: 10px solid rgb(70, 39, 5);
+}
+.input-group-sm {
+  .couple-input {
+    background: transparent;
+    border-color: rgb(70, 39, 5);
+    border-radius: 0;
+  }
+}

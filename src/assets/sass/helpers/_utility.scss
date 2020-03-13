@@ -1,0 +1,20 @@
+$image: '~@/assets/images/';
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+.object-cover{
+  object-fit: cover;
+  object-position: center -37px;
+}
+
+.img-colorful{
+  filter:saturate(3);
+}
+
+.bg-transparent{
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+

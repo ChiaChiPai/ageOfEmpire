@@ -1,0 +1,16 @@
+img {
+  @media (max-width: 767px) {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.product-bg {
+  background-image: url($image+"darken-yellowPaper.jpg");
+  height: 195px;
+  width: 100%;
+}
+.footer-bg {
+  background-image: url($image+"marine-black-marble.jpg");
+  width: 100%;
+  box-shadow: 0px -5px 20px black;
+}

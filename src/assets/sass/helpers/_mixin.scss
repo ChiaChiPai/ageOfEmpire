@@ -1,0 +1,7 @@
+@mixin bp($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+$pad: 992px;
+$mobile: 767px;

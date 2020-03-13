@@ -1,0 +1,80 @@
+.detail-bg {
+  background-image: url($image+"detail-bg-vertical.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  width: 100%;
+  @media (min-width: 767px) {
+    background-image: url($image+"detail-bg.jpg");
+    background-size: 100% 100%;
+    background-position: top center;
+  }
+}
+
+.breadcrumb-item {
+  font-size: 1.3rem;
+  font-weight: bold;
+  a {
+    color: rgb(0, 0, 0);
+  }
+  &::before {
+    color: rgb(0, 0, 0) !important;
+  }
+  &.active {
+    color:$secondary;
+  }
+}
+.detail-border {
+  border: 3px double $dark;
+}
+.custom-select {
+  appearance: menulist;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid $dark;
+  color: $dark;
+  border-radius: 0;
+  &:focus {
+    box-shadow: 0 0 0 0;
+  }
+  &.select-text-center{
+    text-align-last: center;
+  }
+}
+
+.input-group-text {
+  background-color: $dark;
+  border-color: $dark;
+  color: $warning;
+  border-radius: 0;
+  &:hover {
+    color: $warning;
+    text-decoration: none;
+    background-color: darken($dark, 5%);
+  }
+  &:focus,&:active{
+    background-color: $dark;
+  }
+}
+
+.select_style {
+  background: $dark;
+  color: white;
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {
+    font-size: 1.2rem;
+  }
+  50% {
+    font-size: 1.5rem;
+  }
+  to {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,26 @@
+//bootstrap
+@import "~bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "~bootstrap/scss/bootstrap";
+
+//元件
+@import "./component/pagination";
+
+//通用
+@import "./helpers/mixin";
+@import "./helpers/utility";
+
+//前台
+@import "./layout/frontFooter";
+@import "./layout/frontHeader";
+@import "./pages/cart";
+@import "./pages/customerInfo";
+@import "./pages/detail";
+@import "./pages/home";
+@import "./pages/payment";
+@import "./pages/shop";
+
+//後台
+@import "./layout/backNavbar";
+@import "./layout/backSidebar";
+@import "./pages/dashboard";

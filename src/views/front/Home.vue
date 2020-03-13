@@ -158,7 +158,7 @@ export default {
           vm.$http.get(api,{
             header:{
               "Access-Control-Allow-Origin": 'https://graph.facebook.com/',
-              "Access-Control-Allow-Methods": get,
+              "Access-Control-Allow-Methods": 'GET',
               "Access-Control-Allow-Headers":'X-Requested-With'
             }
           }).then((response) => {

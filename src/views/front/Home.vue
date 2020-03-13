@@ -131,7 +131,7 @@ export default {
       // const api = `/graph/v6.0/ageEmpireShop/feed?access_token=EAAL5Tx0lRX0BAPWlyqaK1X82SwV29NyW1VPoSfKsI5TiXghZAVugInKEFhuNdWfYsG6DWKg5qrBTOqRnC5QUrIyRQnaGZAu2jZAv3iqFHpZA1gWdyEMxoMEPw9kUgA9frCZArxDKO7h0YZC8fvmA8ZAHaapgI4RXYe0wUhZCrK4NYAZDZD`;
       const vm = this;
       vm.isLoading = true;
-      axios.get(api).then((response) => {
+      Vue.axios.get(api).then((response) => {
         let dataArr = response.data.data;
         vm.fb_Id= dataArr.map(function(item){
             return item.id;
@@ -149,7 +149,7 @@ export default {
         let id = vm.fb_Id[i];
         const api = `https://graph.facebook.com/v2.2/${id}?fields=attachments&access_token=EAAL5Tx0lRX0BAPWlyqaK1X82SwV29NyW1VPoSfKsI5TiXghZAVugInKEFhuNdWfYsG6DWKg5qrBTOqRnC5QUrIyRQnaGZAu2jZAv3iqFHpZA1gWdyEMxoMEPw9kUgA9frCZArxDKO7h0YZC8fvmA8ZAHaapgI4RXYe0wUhZCrK4NYAZDZD`;
         // vm.$http.get(`/graph/v2.2/${id}?fields=attachments&access_token=EAAL5Tx0lRX0BAPWlyqaK1X82SwV29NyW1VPoSfKsI5TiXghZAVugInKEFhuNdWfYsG6DWKg5qrBTOqRnC5QUrIyRQnaGZAu2jZAv3iqFHpZA1gWdyEMxoMEPw9kUgA9frCZArxDKO7h0YZC8fvmA8ZAHaapgI4RXYe0wUhZCrK4NYAZDZD`).then((response) => {
-          axios.get(api).then((response) => {
+          Vue.axios.get(api).then((response) => {
           vm.pageContent.push(response.data.attachments.data[0]); //問題: 為什麼 console 會說 data
           console.log(response);
         });

@@ -131,13 +131,7 @@ export default {
       // const api = `/graph/v6.0/ageEmpireShop/feed?access_token=EAAL5Tx0lRX0BAPWlyqaK1X82SwV29NyW1VPoSfKsI5TiXghZAVugInKEFhuNdWfYsG6DWKg5qrBTOqRnC5QUrIyRQnaGZAu2jZAv3iqFHpZA1gWdyEMxoMEPw9kUgA9frCZArxDKO7h0YZC8fvmA8ZAHaapgI4RXYe0wUhZCrK4NYAZDZD`;
       const vm = this;
       vm.isLoading = true;
-      vm.$http.get(api,{
-        header:{
-          "Access-Control-Allow-Origin": 'https://graph.facebook.com/',
-          "Access-Control-Allow-Methods": GET, POST, PUT, DELETE, OPTIONS,
-          "Access-Control-Allow-Headers":'X-Requested-With'
-        }
-      }).then((response) => {
+      vm.$http.get(api).then((response) => {
         let dataArr = response.data.data;
         vm.fb_Id= dataArr.map(function(item){
             return item.id;

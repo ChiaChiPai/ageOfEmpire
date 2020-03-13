@@ -112,7 +112,7 @@
           <div class="my-5 col-md-4">
             <paymentDetail :childPrice="price"></paymentDetail>
             <div class="input-group input-group-sm mt-3">
-              <input type="text" class="form-control couple-input" v-model="couponCode" placeholder="請輸入優惠碼" style="background: rgba(0, 0, 0, 0.13);"/>
+              <input type="text" class="form-control couple-input" v-model="couponCode" placeholder="輸入優惠碼 playgame2020 享九折優惠" style="background: rgba(0, 0, 0, 0.13);"/>
               <div class="input-group-append">
                 <button class="btn-dark btn" type="button" style="border-radius:0;" @click.prevent="enterCoupon">套用優惠碼</button>
               </div>

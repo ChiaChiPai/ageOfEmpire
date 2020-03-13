@@ -112,9 +112,9 @@ export default {
       vm.addMessage();
     });
   },
-  beforeDestroy: function() {
-    this.$bus.$off('updateCart');
-  },
+  // beforeDestroy: function() {
+  //   this.$bus.$off('updateCart');
+  // },
   methods: {
     getCart() {
       const api = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart`;

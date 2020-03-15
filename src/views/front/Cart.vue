@@ -57,7 +57,7 @@
                   <th class="text-center d-lg-none" width="110">數量</th>
                   <th class="text-center" width="100">價錢</th>
                 </thead>
-                <tbody v-for="item in carts"
+                <tbody v-for="(item,key) in carts"
                 :key="item.id">
                   <tr>
                     <td class="text-center">
@@ -80,17 +80,17 @@
                     <td class="text-center d-none d-lg-table-cell">
                       <div class="input-group">
                         <div class="input-group-prepend">
-                          <button type="button" class="btn btn-light" style=" border-radius:0" @click="changeQty(item.qty-1,item.product.id,item.id)">-</button>
+                          <button type="button" class="btn btn-light" style=" border-radius:0" @click="changeQty(item.qty-1,item.product.id,item.id,key)">-</button>
                         </div>
-                        <input type="text" class="form-control text-center border-light" v-model="item.qty">
+                        <input type="text" class="form-control text-center border-light" v-model="item.qty" disabled>
                         <div class="input-group-append">
-                          <button type="button" class="btn btn-light" style="border-radius:0" @click="changeQty(item.qty+1,item.product.id,item.id)">+</button>
+                          <button type="button" class="btn btn-light" style="border-radius:0" @click="changeQty(item.qty+1,item.product.id,item.id,key)">+</button>
                         </div>
                       </div>
                     </td>
                     <td class="d-lg-none">
                       <div class="input-group mb-3" id="inputGroupSelect">
-                        <select class="custom-select select-text-center" v-model="item.qty" @change="changeQty(item.qty,item.product.id,item.id)">
+                        <select class="custom-select select-text-center" v-model="item.qty" @change="changeQty(item.qty,item.product.id,item.id,key)">
                           <option class="select_style" selected disabled>數量</option>
                           <option :value="num" class="select_style" v-for="num in 10" :key="num">{{num}} {{item.unit}}</option>
                         </select>
@@ -160,6 +160,9 @@ export default {
         vm.isLoading = false;
         vm.carts = response.data.data.carts;
         vm.price = response.data.data;
+        vm.carts.sort((a,b) =>{
+          return b.qty - a.qty
+        })
       });
     },
     deleteCart(id) {
@@ -181,7 +184,7 @@ export default {
         this.getCart();
       });
     },
-    changeQty(qty,itemId,cartId){
+    changeQty(qty,itemId,cartId,key){
       const vm = this;
       vm.isLoading = true;
       const deleteApi = `${process.env.APIPATH}/api/${process.env.CUSTOMPATH}/cart/${cartId}`;

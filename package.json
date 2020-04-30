@@ -14,7 +14,7 @@
     "boostrap": "^2.0.0",
     "bootstrap": "^4.4.1",
     "cors-anywhere": "^0.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.13.1",
     "popper.js": "^1.16.1",
     "vee-validate": "^2.2.15",
